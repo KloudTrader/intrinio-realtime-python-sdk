@@ -20,8 +20,8 @@ class IntrinioRealtimeClient:
             raise ValueError("Options parameter is required")
             
         self.options = options
-        self.username = options['username']
-        self.password = options['password']
+#        self.username = options['username']
+#        self.password = options['password']
         self.provider = options['provider']
         
         if 'channels' in options:
@@ -77,7 +77,8 @@ class IntrinioRealtimeClient:
 
     def auth_url(self):
         if self.provider == IEX:
-            return "https://realtime.intrinio.com/auth"
+           # return "https://realtime.intrinio.com/auth"
+            return "http://realtime.intrinio.com/auth"
         elif self.provider == QUODD:
             return "https://api.intrinio.com/token?type=QUODD"
         
