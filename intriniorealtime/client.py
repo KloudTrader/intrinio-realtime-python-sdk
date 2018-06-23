@@ -47,11 +47,11 @@ class IntrinioRealtimeClient:
         else:
             self.quotes = queue.Queue(maxsize=MAX_QUEUE_SIZE)
         
-        if not self.username:
-            raise ValueError("Parameter 'username' must be specified") 
+#        if not self.username:
+#            raise ValueError("Parameter 'username' must be specified") 
             
-        if not self.password:
-            raise ValueError("Parameter 'password' must be specified")
+#        if not self.password:
+#            raise ValueError("Parameter 'password' must be specified")
         
         if 'on_quote' in options:
             if not callable(options['on_quote']):
