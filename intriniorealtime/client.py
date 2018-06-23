@@ -118,7 +118,8 @@ class IntrinioRealtimeClient:
             pass
 
     def refresh_token(self):
-        response = requests.get(self.auth_url(), auth=(self.username, self.password))
+        #response = requests.get(self.auth_url(), auth=(self.username, self.password))
+        response = requests.get(self.auth_url())
         
         if response.status_code != 200:
             raise RuntimeError("Auth failed")
